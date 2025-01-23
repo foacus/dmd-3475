@@ -3,10 +3,10 @@
  */
 
 // 1. Change the value to your first name:
-let firstName = 'dsfsdfdsfds';
+let firstName = 'Troy';
 
 // 2. Change the value to your age:
-let age = 72;
+let age = 21;
 
 // 3. Complete the sentence: "I'm taking this course because..."
 let whyImTakingThisCourse = "I want to learn how to code and build interactive websites.";
