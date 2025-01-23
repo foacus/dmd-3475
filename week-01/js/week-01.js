@@ -9,7 +9,7 @@ let firstName = 'Troy';
 let age = 21;
 
 // 3. Complete the sentence: "I'm taking this course because..."
-let whyImTakingThisCourse = "I want to learn how to code and build interactive websites.";
+let whyImTakingThisCourse = "I have programming expierence making games and I want to expand my understanding and skillsets into web design.";
 
 // 4. You're all done. Take a look at the code below to see how this all works.
 
