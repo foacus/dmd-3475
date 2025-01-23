@@ -1,0 +1,18 @@
+.test-btn {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgb(207, 207, 207);
+    color: black;
+    border: 1px solid  rgba(167, 167, 167, 0.75);
+    padding: 5px 10px;
+    box-shadow: 0px 0px 5px rgba(71, 71, 71, 0.75);
+}
+
+.test-btn:active {
+    box-shadow: 0px 0px 0px rgba(71, 71, 71, 0.75);
+}
+body:hover .test-btn {
+    display: initial;
+}

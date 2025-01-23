@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 04</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+
+
+
+    <div class="container mt-5">
+        <div class="row">
+            <main class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 ">
+                <h1>Escape Room (change me)</h1>
+                <p>Update this intro text. Escape room games are interactive puzzles that challenge players to find clues, solve riddles, and escape from a locked
+                room within a limited time. They can be played online or in real life, with various themes, stories, and difficulty
+                levels. Escape room games are fun and exciting, as they test the players' logic, creativity, teamwork, and communication
+                skills. They are also a great way to exercise the brain and relieve stress.</p>
+            </main>
+        </div>
+
+        <div class="row">
+            <main class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 ">
+                <!-- Output goes here -->
+            </main>
+        </div>
+    </div>
+
+    <!-- JS Templates -->
+    <template id="confirm">
+        <div class="card mb-4">
+            <h5 class="card-header">Confirm</h5>
+            <div class="card-body">
+                <h5 class="card-title">Question</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <button class="btn btn-primary btn-true">OK</button>
+                <button class="btn btn-secondary btn-false">Cancel</button>
+            </div>
+        </div>
+    </template>
+
+    <template id="prompt">
+        <div class="card mb-4">
+            <h5 class="card-header">Prompt</h5>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">
+                        <h5 class="card-title">What is Your Name?</h5>
+                    </label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Type your response...">
+                </div>
+                <button class="btn btn-primary btn-true">OK</button>
+                <button class="btn btn-secondary btn-false">Cancel</button>
+            </div>
+        </div>
+    </template>
+
+    <template id="alert">
+        <div class="card mb-4">
+            <h5 class="card-header">Alert</h5>
+            <div class="card-body">
+                <h5 class="card-title">Title</h5>
+                <p class="card-text">text</p>
+                <button class="btn btn-primary btn-true">OK</button>
+                <button class="btn btn-secondary btn-false">Cancel</button>
+            </div>
+        </div>
+    </template>
+
+
+    <!-- Don't touch! We need this script -->
+    <script type="module" src="../.core/js/main.js"></script>
+
+
+    <!-- Game framework -->
+    <script src="js/game-framework.js" type="module"></script>
+
+
+    <!-- Open the following file in an editor to complete your assignment. -->
+    <script src="js/main.js" type="module"></script>
+
+
+</body>
+</html>
