@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 Demo</title>
+</head>
+<body>
+    <script>
+        console.log("It's working!")
+
+        console.info("Hello this is info")
+
+        console.warn("You did a bad thing")
+
+       // alert("Invalid")
+
+       //Stores a variable 'let', confirms returns a true or false
+       let isOldEnough = confirm("Are you old enough to visit this page?")
+
+       //prints the variable
+       console.log("user choice:",isOldEnough)
+
+       if(isOldEnough){
+        alert("Thou shall pass.")
+       }else{
+        alert("Thou shall not pass.")
+       }
+
+       let userName = prompt("What is your name")
+       //These permanently change the variable
+       userName = userName.trim()
+       userName = userName.toUpperCase()
+       
+       //console.log("Users name is:", userName)
+
+    // With trim method
+      // console.log("Users name is:", userName.trim())
+
+      console.log("Users name is:", userName)
+
+    </script>
+</body>
+</html>
