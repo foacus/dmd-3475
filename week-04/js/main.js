@@ -18,3 +18,7 @@ if(await Confirm(`Hi ${name}. Do you want to play the game?`)) {
     window.location.reload()    
 }
 
+if(await Confirm('There are two doors before you, do you want to enter the left one?')){
+    await Alert('You died!')
+}
+    
