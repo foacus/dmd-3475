@@ -6,12 +6,9 @@ import { Alert, Confirm, Prompt } from "./game-framework.js";
 
 
 // Modify the text for the introduction
-await Alert('Welcome to my game.')
-
-let name = await Prompt("What is your name?")
 
 // Level 1
-if(await Confirm(`Hi ${name}. Do you want to enter the temple?`)) {
+if(await Confirm(`Do you want to enter the temple?`)) {
     await Alert('Great! Let\'s get started.')
 } else {
     await Alert('You decide the risk isn’t worth it. Some mysteries are better left undiscovered.')
