@@ -46,9 +46,10 @@ function updateValues(event){
 
 function calculateTipPerPerson(totalValue, tipValue, peopleValue){
     let tipPerPerson = tipValue * .01 * totalValue / peopleValue;
-    console.log(tipPerPerson);
-    return tipPerPerson;
+    return Math.floor(tipPerPerson * 100) / 100;
 }
 function calculateTotalPerPerson(totalValue, tipValue, peopleValue){
-    
+    let tipPerPerson = tipValue * .01 * totalValue / peopleValue;
+    let totalPerPerson = totalValue / peopleValue;
+    return Math.floor((tipPerPerson + totalPerPerson) * 100) / 100;
 }
