@@ -4,16 +4,26 @@
  */
 
 // 1) Add CSS Properties to the body tag
-
+let body = document.getElementById('css-zen-garden');
+body.style.backgroundColor = '#69f';
+body.style.margin = 0;
+body.style.color = '#000033';
+body.style.fontFamily = "'Trebuchet MS', sans-serif";
+body.style.fontSize = '14pt';
+//<!-- font: 10pt/14pt "Trebuchet MS", sans-serif; -->
 
 // 2) Add the .page-wrapper class
+let div1 = document.querySelector('div') 
+div1.classList.add('page-wrapper');
 
 
 // 3) Add the .summary class
-
+sumDiv = document.getElementById('zen-summary')
+sumDiv.classList.add('summary')
 
 // 4) Add the .sidebar class
-
+sideBar = document.querySelector('aside');
+sideBar.classList.add('sidebar')
 
 // 5) Add these links to the "Resources" <ul>
 let resources = [
@@ -43,6 +53,14 @@ let resources = [
         linkText: "Translations"
     },
 ];
+
+zenresources = document.getElementById("resourceList");
+zenresources.classList.add("ben")
+
+var newLi = document.createElement('li');
+newLi.textContent = 'New Test Item';
+document.getElementById('ben')
+
 
 // Hint: Loop over the resources array to build each list item. 
 // E.g., <li><a href="someLink" title="someTitle">someText</a></li>
