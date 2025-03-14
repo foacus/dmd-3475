@@ -63,8 +63,8 @@ resources.forEach(function(resource) {
     var a = document.createElement("a");
 
     a.href = resource.href;
-    a.title = resource.title;
     a.innerText = resource.linkText;
+    a.Title = resource.title;
 
     li.appendChild(a);
     resourcesList.appendChild(li);
