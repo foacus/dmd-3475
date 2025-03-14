@@ -52,15 +52,24 @@ let resources = [
         href: "http://www.mezzoblue.com/zengarden/translations/",
         linkText: "Translations"
     },
-];
+]; 
 
-zenresources = document.getElementById("resourceList");
-zenresources.classList.add("ben")
+// Loop over the resources array to build each list item.
+var resourcesList = document.getElementById("resourceList")
 
-var newLi = document.createElement('li');
-newLi.textContent = 'New Test Item';
-document.getElementById('ben')
+resources.forEach(function(resource) {
 
+    var li = document.createElement("li");
+    var a = document.createElement("a");
+
+    a.href = resource.href;
+    a.title = resource.title;
+    a.innerText = resource.linkText;
+
+    li.appendChild(a);
+    resourcesList.appendChild(li);
+
+});
 
 // Hint: Loop over the resources array to build each list item. 
 // E.g., <li><a href="someLink" title="someTitle">someText</a></li>
