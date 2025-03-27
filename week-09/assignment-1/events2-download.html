@@ -49,7 +49,27 @@
 
     drawCircle(x, y, size);
 
-    // Add your code here
+    document.addEventListener('keydown', function(event){
+      const pressedKey = event.key;
+
+      if (pressedKey === 's' || pressedKey === 'S'){
+        y += 5;
+        console.log("s pressed")
+      }else if(pressedKey === 'w' || pressedKey === 'W'){
+        y -= 5;
+        console.log("w pressed")
+      }else if(pressedKey === 'd' || pressedKey === 'D'){
+        x += 5;
+        console.log("d pressed")
+      }else if(pressedKey === 'a' || pressedKey === 'A'){
+        x -= 5;
+        console.log("a pressed")
+      }else{
+        console.log("error");
+      }
+      
+      drawCircle(x, y, size);
+    })
 
   </script>
   </body>
