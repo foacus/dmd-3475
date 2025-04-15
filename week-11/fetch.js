@@ -1,6 +1,7 @@
 let searchInput = document.getElementById('searchInput');
-let ul = document.getElementById('searchResults')
-let searchBtn = document.getElementById('searchButton')
+let ul = document.getElementById('searchResults');
+let searchBtn = document.getElementById('searchButton');
+let resultsCount = document.getElementById('resultsCount');
 
 searchBtn.addEventListener("click", function (event) {
     console.log("Search Initiated")
@@ -14,15 +15,37 @@ searchBtn.addEventListener("click", function (event) {
         return;
     }
 
-    fetch('https://github.uconn.edu/api/v3/search/users?q=Brian')
+    fetch(`https://github.uconn.edu/api/v3/search/users?q=${query}`)
+
     .then(function(response){
     return response.json();
     })
-    .then(function(data){
 
-        console.log(data);
-    })
+    .then(function(data){
+        
+        ul.innerHTML = '';
+
+        if(data.total_count > 0){
+            resultsCount.textContent = `${data.total_count} result(s) found.`;
+       
+            data.items.forEach(function(user){
+                const li = document.createElement('li');
+                li.className = 'list-group-item d-flex align-items-center'
+
+                li.innerHTML = `
+                <img src="${user.avatar_url}" alt="Avatar" width="50" height="50" class="me-3 rounded">
+                <a href="https://github.uconn.edu/${user.login}" target="_blank">${user.login}</a>
+                `;
+
+                ul.appendChild(li);
+            });
+        } else {
+            resultsCount.textContent = 'No users found.';
+        }
+        
+           
+    }  
     .catch(function(error){
         console.log('Error:', error);
-    });
+    })
 })
