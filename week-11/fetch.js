@@ -30,7 +30,6 @@ searchBtn.addEventListener("click", function (event) {
        
             data.items.forEach(function(user){
                 const li = document.createElement('li');
-                li.className = 'list-group-item d-flex align-items-center'
 
                 li.innerHTML = `
                 <img src="${user.avatar_url}" alt="Avatar" width="50" height="50" class="me-3 rounded">
