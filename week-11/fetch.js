@@ -44,7 +44,7 @@ searchBtn.addEventListener("click", function (event) {
         }
         
            
-    }  
+    })
     .catch(function(error){
         console.log('Error:', error);
     })
