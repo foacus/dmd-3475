@@ -13,11 +13,12 @@
 </head>
 <body>
     <a-scene>
-      <a-assets>
-        <a-gltf-model id="saloon" src="3DObjects/saloon.gltf"></a-gltf-model>
-      </a-assets>
+        <a-assets>
+          <a-gltf-model id="saloon" src="3DObjects/saloon.glb"></a-gltf-model>
+        </a-assets>
 
-      <a-gltf-model id="saloon" src="#saloon" position="0 0 -3" rotation="0 0 0"></a-gltf-model>
+        <!-- Add the saloon model-->
+        <a-gltf-model id="saloon" src="#saloon" position="8.5 0 -5.5" rotation="0 -120 0" scale="50 50 50" collider="shape: mesh"></a-gltf-model>
 
 
         <!-- Add a simple 3D object -->
