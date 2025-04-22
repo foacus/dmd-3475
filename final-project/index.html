@@ -15,6 +15,7 @@
     <a-scene>
         <a-assets>
           <a-gltf-model id="saloon" src="3DObjects/saloon.glb"></a-gltf-model>
+          <a-gltf-model id="revolver" src="3DObjects/revolver.glb"></a-gltf-model>
         </a-assets>
 
         <!-- Add the saloon model-->
@@ -23,6 +24,8 @@
         <a-gltf-model id="saloon2" src="#saloon" position="-5.086 0 -17.765" rotation="0 -80 0" scale="50 50 50" collider="shape: mesh"></a-gltf-model>
         <!-- Add the saloon3 model-->
         <a-gltf-model id="saloon3" src="#saloon" position="-16.372 0 -10.345" rotation="0 -41.510 0" scale="50 50 50" collider="shape: mesh"></a-gltf-model>
+        <!-- Add the revolver model-->
+        <a-gltf-model id="revolver" src="#revolver" position="-0.647 0.696 -2.567" rotation="-0.269 -47.830 90.698" scale="2.897 2.897 2.897" collider="shape: mesh"></a-gltf-model>
 
         <!-- Add a ground -->
         <a-plane 
@@ -37,6 +40,13 @@
         repeat="3 3"
         ></a-plane>
 
+        <a-box
+        position="0 0.338 -2.666" 
+        rotation="-90 0 0" 
+        scale="2.339 1 0.683"
+        color="brown"
+        ></a-box>
+
         <!-- Add a light -->
         <a-light type="directional" position="2 4 2"></a-light>
 
@@ -48,7 +58,7 @@
           id="infoPanel"
           position="0 1.5 -3"
           info-panel
-          visible="true"
+          visible="false"
           scale="1 1 1"
           geometry="primitive: plane; width: 1.5; height: 1.8"
           material="color: #333333; shader: flat; transparent: false" class="raycastable">
@@ -61,16 +71,6 @@
           <a-entity id="revolverDescription"
             position="-0.68 -0.2 0"
             text="baseline: top; shader: msdf; anchor: left; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: In the Wild West, sheriffs were elected lawmen responsible for keeping order in frontier towns. They enforced laws, managed jails, and sometimes had to form posses to chase down criminals across vast, lawless territories."></a-entity>
-        </a-entity>
-
-        <a-entity
-          id="revolver"
-          position="0 1.5 -3"
-          info-panel
-          visible="true"
-          scale="1 1 1"
-          geometry="primitive: plane; width: 1.5; height: 1.8"
-          material="color: #333333; shader: flat; transparent: false" class="raycastable">
         </a-entity>
 
     </a-scene>
