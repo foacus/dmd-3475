@@ -7,9 +7,6 @@
 
     <!-- Adds the a-frame api to the website --> 
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
-
-    <script src="js/highligh.js"></script>
-    <script src="js/info_panel.js"></script>
 </head>
 <body>
     <a-scene>
@@ -24,8 +21,39 @@
         <a-gltf-model id="saloon2" src="#saloon" position="-5.086 0 -17.765" rotation="0 -80 0" scale="50 50 50" collider="shape: mesh"></a-gltf-model>
         <!-- Add the saloon3 model-->
         <a-gltf-model id="saloon3" src="#saloon" position="-16.372 0 -10.345" rotation="0 -41.510 0" scale="50 50 50" collider="shape: mesh"></a-gltf-model>
+        
         <!-- Add the revolver model-->
-        <a-gltf-model id="revolver" src="#revolver" position="-0.647 0.696 -2.567" rotation="-0.269 -47.830 90.698" scale="2.897 2.897 2.897" collider="shape: mesh"></a-gltf-model>
+        <a-gltf-model 
+        revolver cursor="rayOrigin: mouse;" 
+        id="revolver" 
+        src="#revolver" 
+        position="-0.647 0.696 -2.567" 
+        rotation="-0.269 -47.830 90.698" 
+        scale="2.897 2.897 2.897" 
+        collider="shape: mesh"
+        ></a-gltf-model>
+
+        <!-- The Revolver Info Text-->
+        <a-entity id="revovlerInfoText" visible="true" position="0 2 -3">
+          <a-plane 
+            width="2.1" 
+            height="1.1" 
+            color="black" 
+            opacity="0.7">
+          </a-plane>
+          <a-text 
+            value="The Colt Single Action Army 
+            revolver, introduced in the 1870s 
+            and widely used in the 1880s, 
+            became known as the 
+            Peacemaker and was a standard 
+            sidearm for the U.S. military 
+            and frontier lawmen." 
+            color="white" 
+            position="-0.952 0.018 0" 
+            width="3">
+          </a-text>
+        </a-entity>
 
         <!-- Add a ground -->
         <a-plane 
@@ -53,25 +81,7 @@
         <!-- Add a sky -->
         <a-sky color="lightblue"></a-sky>
 
-        <!-- Add a info panel-->
-        <a-entity
-          id="infoPanel"
-          position="0 1.5 -3"
-          info-panel
-          visible="false"
-          scale="1 1 1"
-          geometry="primitive: plane; width: 1.5; height: 1.8"
-          material="color: #333333; shader: flat; transparent: false" class="raycastable">
-          <a-entity id="ponyoMovieImage" mixin="movieImage" material="src: #ponyo" visible="false"></a-entity>
-          <a-entity id="kazetachinuMovieImage" mixin="movieImage" material="src: #kazetachinu" visible="false"></a-entity>
-          <a-entity id="karigurashiMovieImage" mixin="movieImage" material="src: #karigurashi" visible="false"></a-entity>
-          <a-entity id="itemTitle"
-            position="-0.68 -0.1 0"
-            text="shader: msdf; anchor: left; width: 1.5; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: The Role of Sheriffs"></a-entity>
-          <a-entity id="revolverDescription"
-            position="-0.68 -0.2 0"
-            text="baseline: top; shader: msdf; anchor: left; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: In the Wild West, sheriffs were elected lawmen responsible for keeping order in frontier towns. They enforced laws, managed jails, and sometimes had to form posses to chase down criminals across vast, lawless territories."></a-entity>
-        </a-entity>
+        <script src="js/info_panel.js"></script>
 
     </a-scene>
 </body>
