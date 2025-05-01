@@ -17,11 +17,24 @@ form.addEventListener("submit", function (event){
         return response.json()
     })
     .then(function(data){
-        console.log(data)
+        console.log('data', data)
+        if(data.status == 'error'){
+            data.errors.to.forEach(item =>{
+                responseMessage.innerHTML = `${item} <br>`;
+            });
+            data.errors.subject.forEach(item =>{
+                responseMessage.innerHTML = `${item} <br>`
+            });
+            data.errors.message.forEach(item =>{
+                responseMessage.innerHTML = `${item} <br>`
+            });
+        }else{
+            responseMessage.innerHTML = `Message sent!`
+        }
     })
     .catch(function(error){
-        console.error('Error:', error)
 
-        responseMessage.innerHTML = error.message;
+        // let errorMessage = Object.values(error.errors);
+        // responseMessage.innerHTML = `${errorMessage}`;    
     });
 })
