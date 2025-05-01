@@ -43,3 +43,26 @@ AFRAME.registerComponent("revolver", {
       },
     }
   });
+
+  AFRAME.registerComponent("poster", {
+    init: function () {
+      this.isUp = false;
+    },
+    events: {
+      click: function (e) {
+          const el = this.el;
+          const panel = document.querySelector('#posterInfoText');
+          panel.setAttribute("visible", !panel.getAttribute("visible"));
+
+          if(this.isUp == false){
+            this.isUp = true;
+            el.setAttribute("position","0.675 1.000 -2.685")
+            el.setAttribute("rotation","8.859 -86.524 -80.970")
+        } else {
+            this.isUp = false;
+            el.setAttribute("position","0.675 0.685 -2.685")
+            el.setAttribute("rotation","0.553 -62.998 0.646")
+        }
+      },
+    }
+  });

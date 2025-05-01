@@ -14,6 +14,8 @@
           <a-gltf-model id="saloon" src="3DObjects/saloon.glb"></a-gltf-model>
           <a-gltf-model id="revolver" src="3DObjects/revolver.glb"></a-gltf-model>
           <a-gltf-model id="badge" src="3DObjects/badge.glb"></a-gltf-model>
+          <a-gltf-model id="poster" src="3DObjects/poster.glb"></a-gltf-model>
+          <a-gltf-model id="table" src="3DObjects/table.glb"></a-gltf-model>
         </a-assets>
 
         <!-- Add the saloon model-->
@@ -22,6 +24,9 @@
         <a-gltf-model id="saloon2" src="#saloon" position="-5.086 0 -17.765" rotation="0 -80 0" scale="50 50 50" collider="shape: mesh"></a-gltf-model>
         <!-- Add the saloon3 model-->
         <a-gltf-model id="saloon3" src="#saloon" position="-16.372 0 -10.345" rotation="0 -41.510 0" scale="50 50 50" collider="shape: mesh"></a-gltf-model>
+
+         <!-- Add the table model-->
+         <a-gltf-model src="#table" position="-0.038 0 -2.624" rotation="0 0 0" scale="70.622 59.913 59.913" collider="shape: mesh"></a-gltf-model>
 
         <!-- Add the revolver model-->
         <a-gltf-model 
@@ -40,6 +45,38 @@
         rotation="2.908 -19.571 -2.275" 
         scale="12 12 12" 
         ></a-gltf-model>
+
+        <!-- Add the poster model-->
+        <a-gltf-model 
+        poster  
+        src="#poster" 
+        position="0.675 0.685 -2.685" 
+        rotation="0.553 -62.998 0.646" 
+        scale="22 22 22" 
+        ></a-gltf-model>
+
+        <!-- The poster Info Text-->
+        <a-entity posterInfo id="posterInfoText" visible="false" position="2.030 2 -2.440" rotation="0 -28.988 0">
+          <a-plane 
+            width="2.1" 
+            height="1.4" 
+            color="black" 
+            opacity="0.7">
+          </a-plane>
+          <a-text 
+            value="Wanted posters weren’t 
+            always accurate! Outlaws were 
+            often described with vague terms 
+            like 'tall', 'mean eyes', or 
+            'rides a dark horse'. Sometimes, 
+            posters were printed from memory 
+            or rumor—and bounties could be 
+            paid 'dead or alive'." 
+            color="white" 
+            position="-0.952 0.018 0" 
+            width="3">
+          </a-text>
+        </a-entity>
 
         <!-- The Badge Info Text-->
         <a-entity badgeInfo id="badgeInfoText" visible="false" position="0 2 -3">
@@ -66,7 +103,7 @@
         </a-entity>
 
         <!-- The Revolver Info Text-->
-        <a-entity revolverInfo id="revovlerInfoText" visible="false" position="0 2 -3">
+        <a-entity revolverInfo id="revovlerInfoText" visible="false" position="-1.961 2 -2.366" rotation="0 33.444 0">
           <a-plane 
             width="2.1" 
             height="1.1" 
@@ -99,14 +136,6 @@
         normal-scale="1 1"
         repeat="3 3"
         ></a-plane>
-
-        <a-box
-        box
-        position="0 0.338 -2.666" 
-        rotation="-90 0 0" 
-        scale="2.339 1 0.683"
-        color="brown"
-        ></a-box>
 
         <!-- Add a light -->
         <a-light type="directional" position="2 4 2"></a-light>
