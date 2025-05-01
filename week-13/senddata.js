@@ -18,6 +18,7 @@ form.addEventListener("submit", function (event){
     })
     .then(function(data){
         console.log('data', data)
+        
         if(data.status == 'error'){
             data.errors.to.forEach(item =>{
                 responseMessage.innerHTML = `${item} <br>`;
