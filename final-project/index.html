@@ -9,32 +9,64 @@
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
 </head>
 <body>
-    <a-scene>
+    <a-scene cursor="rayOrigin: mouse;">
         <a-assets>
           <a-gltf-model id="saloon" src="3DObjects/saloon.glb"></a-gltf-model>
           <a-gltf-model id="revolver" src="3DObjects/revolver.glb"></a-gltf-model>
+          <a-gltf-model id="badge" src="3DObjects/badge.glb"></a-gltf-model>
         </a-assets>
 
         <!-- Add the saloon model-->
-        <a-gltf-model id="saloon" src="#saloon" position="8 0 -15" rotation="0 -120 0" scale="50 50 50" collider="shape: mesh"></a-gltf-model>
+        <a-gltf-model id="saloon1" src="#saloon" position="8 0 -15" rotation="0 -120 0" scale="50 50 50" collider="shape: mesh"></a-gltf-model>
         <!-- Add the saloon2 model-->
         <a-gltf-model id="saloon2" src="#saloon" position="-5.086 0 -17.765" rotation="0 -80 0" scale="50 50 50" collider="shape: mesh"></a-gltf-model>
         <!-- Add the saloon3 model-->
         <a-gltf-model id="saloon3" src="#saloon" position="-16.372 0 -10.345" rotation="0 -41.510 0" scale="50 50 50" collider="shape: mesh"></a-gltf-model>
-        
+
         <!-- Add the revolver model-->
         <a-gltf-model 
-        revolver cursor="rayOrigin: mouse;" 
-        id="revolver" 
+        revolver  
         src="#revolver" 
         position="-0.647 0.696 -2.567" 
         rotation="-0.269 -47.830 90.698" 
         scale="2.897 2.897 2.897" 
-        collider="shape: mesh"
         ></a-gltf-model>
 
+        <!-- Add the badge model-->
+        <a-gltf-model 
+        badge  
+        src="#badge" 
+        position="-0.050 0.687 -2.685" 
+        rotation="2.908 -19.571 -2.275" 
+        scale="12 12 12" 
+        ></a-gltf-model>
+
+        <!-- The Badge Info Text-->
+        <a-entity badgeInfo id="badgeInfoText" visible="false" position="0 2 -3">
+          <a-plane 
+            width="2.1" 
+            height="1.4" 
+            color="black" 
+            opacity="0.7">
+          </a-plane>
+          <a-text 
+            value="Sheriff badges in the Old
+            West were often handmade! Some 
+            were cut from coins or tin and 
+            stamped with stars or the word 
+            'SHERIFF'. The job was dangerous 
+            and paid poorly, but sheriffs 
+            were crucial in keeping order—
+            especially in boomtowns 
+            and frontier settlements." 
+            color="white" 
+            position="-0.952 0.018 0" 
+            width="3">
+          </a-text>
+        </a-entity>
+
         <!-- The Revolver Info Text-->
-        <a-entity id="revovlerInfoText" visible="true" position="0 2 -3">
+        <a-entity revolverInfo id="revovlerInfoText" visible="false" position="0 2 -3">
           <a-plane 
             width="2.1" 
             height="1.1" 
@@ -69,6 +101,7 @@
         ></a-plane>
 
         <a-box
+        box
         position="0 0.338 -2.666" 
         rotation="-90 0 0" 
         scale="2.339 1 0.683"
@@ -81,7 +114,7 @@
         <!-- Add a sky -->
         <a-sky color="lightblue"></a-sky>
 
-        <script src="js/info_panel.js"></script>
+        <script src="js/main.js"></script>
 
     </a-scene>
 </body>
